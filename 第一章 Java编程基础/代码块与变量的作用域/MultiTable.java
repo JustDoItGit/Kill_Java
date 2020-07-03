@@ -6,7 +6,10 @@ public class MultiTable {
             String line = "";
             for (int j = 1; j <= 9; j++) {
                 if (i >= j){
-                    line = line + i + "*" + i + "=" + (i * j) + "\t";
+                    line += i + "*" + i + "=" + (i * j) + "\t";
+                }
+                else{
+                    break;
                 }
             }
             System.out.println(line);
