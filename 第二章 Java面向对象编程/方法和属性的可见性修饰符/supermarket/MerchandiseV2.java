@@ -14,6 +14,8 @@ public class MerchandiseV2 {
     private NonPublicClassCanUseAnyName nonPublicClassCanUseAnyName;
     public static double DISCOUNT = 0.1;
 
+    int baonei = 1;
+
     // >> TODO 构造方法如果是private的，那么就只有当前的类可以调用这个构造方法
     private MerchandiseV2(String name, String id, int count, double soldPrice, double purchasePrice) {
         this.name = name;

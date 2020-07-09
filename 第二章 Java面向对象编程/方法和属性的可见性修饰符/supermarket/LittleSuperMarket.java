@@ -10,6 +10,11 @@ public class LittleSuperMarket {
     private MerchandiseV2[] merchandises;
     private int[] merchandiseSold;
 
+    MerchandiseV2 m_1 = new MerchandiseV2();
+    // 没有添加修饰符，包内可引用
+    int a = m_1.baonei;
+
+
     /**
      * 初始化小超市
      *
@@ -24,6 +29,7 @@ public class LittleSuperMarket {
         this.superMarketName = superMarketName;
         this.address = address;
         this.parkingCount = parkingCount;
+        System.out.println("a:" + this.a);
 
         merchandises = new MerchandiseV2[merchandiseCount];
         for (int i = 0; i < merchandises.length; i++) {
