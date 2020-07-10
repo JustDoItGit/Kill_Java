@@ -39,6 +39,10 @@ public class MerchandiseV2Overload {
         return this.buy(1);
     }
 
+    private double buy(int count, int b) {
+        return this.buy(2);
+    }
+
     public double buy(int count) {
         return this.buy(count, false);
     }
