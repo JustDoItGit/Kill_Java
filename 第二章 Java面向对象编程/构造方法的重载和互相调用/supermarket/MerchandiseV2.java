@@ -12,7 +12,9 @@ public class MerchandiseV2 {
     public double purchasePrice;
 
     // >> TODO 构造方法（constructor）的重载和普通方法一样
-    private MerchandiseV2(String name, String id, int count, double soldPrice, double purchasePrice) {
+//    private MerchandiseV2(String name, String id, int count, double soldPrice, double purchasePrice) {
+//    public MerchandiseV2(String name, String id, int count, double soldPrice, double purchasePrice) {
+    protected MerchandiseV2(String name, String id, int count, double soldPrice, double purchasePrice) {
         this.name = name;
         this.id = id;
         this.count = count;
