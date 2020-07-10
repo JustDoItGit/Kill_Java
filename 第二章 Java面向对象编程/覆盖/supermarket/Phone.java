@@ -59,6 +59,21 @@ public class Phone extends MerchandiseV2 {
         System.out.println("购买成功，花费为" + cost);
         return cost;
     }
+    // 可见性修饰符也必须一样
+//    private double buy(int count) { // error
+//        if (count > MAX_BUY_ONE_ORDER) {
+//            System.out.println("购买失败，手机一次最多只能买" + MAX_BUY_ONE_ORDER + "个");
+//            return -2;
+//        }
+//        if (this.count < count) {
+//            System.out.println("购买失败，库存不够");
+//            return -1;
+//        }
+//        this.count -= count;
+//        double cost = count * soldPrice;
+//        System.out.println("购买成功，花费为" + cost);
+//        return cost;
+//    }
 
     // >> TODO 返回值必须一样，不是类型兼容，而是必须一摸一样。
     // >> TODO 如果签名一样，但是返回值不一样，会是错误
