@@ -51,14 +51,17 @@ public class ReferenceAssign {
 
         // TODO 父类的引用，可以指向子类的对象。
         // TODO 确定MerchandiseV2的引用ccm是指向的是Phone或者Phone的子类对象，那么可以强制类型转换
-        Phone ccp = (Phone) ccm;
+        Phone ccp = (Phone) ccm; // right
+        Phone ccp_ = (ShellColorChangePhone) ccm; // right
 
         // TODO 确定MerchandiseV2的引用ccm是指向的是ShellColorChangePhone或者ShellColorChangePhone的子类对象
         // TODO 那么可以强制类型转换
         ShellColorChangePhone scp = (ShellColorChangePhone) ccm;
 
         // TODO 会出错，因为m2指向的是一个Phone类型的对象，不是ShellColorChangePhone的对象
-        ShellColorChangePhone notCCP = (ShellColorChangePhone) m2;
+        Phone notCCP_ = (Phone) m2; // right
+        ShellColorChangePhone notCCP = (ShellColorChangePhone) m2; // error
+
 
 
     }
