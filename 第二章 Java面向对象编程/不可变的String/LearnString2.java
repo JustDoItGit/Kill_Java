@@ -32,9 +32,9 @@ public class LearnString2 {
         String content3 = "   orange_Apple_banana   ";
 
 
-        // TODO 两个String对象比较是否相等，一定要用equals方法 错误的说法
+        // TODO 两个String对象比较是否相等，一定要用equals方法
         System.out.println(content.equals(content2));
-        System.out.println(content == content2); // 尴尬了 不一定
+        System.out.println(content == content2); // 后续会讲到，一定长度范围内，hash地址相等，大于一定范围就不相等了
         System.out.println("content id: " + System.identityHashCode(content));
         System.out.println("content2 id: " + System.identityHashCode(content2));
 
