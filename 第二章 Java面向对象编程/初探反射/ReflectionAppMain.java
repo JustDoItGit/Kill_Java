@@ -19,34 +19,35 @@ public class ReflectionAppMain {
         // TODO 另一种获得Class实例的方法，直接类名点
         Class clazz = MerchandiseV2.class;
 
-        Field countField = clazz.getField("count");
-        System.out.println("通过反射获取count的值："+countField.get(m100));
+//        Field countField = clazz.getField("count");
+//        System.out.println("通过反射获取count的值："+countField.get(m100));
 
-        Method buyMethod = clazz.getMethod("buy", int.class);
-        System.out.println(buyMethod.invoke(m100, 10));
+//        Method buyMethod = clazz.getMethod("buy", int.class);
+//        System.out.println(buyMethod.invoke(m100, 10));
 
-//        Field countField = clazz.getDeclaredField("count");
-//        countField.setAccessible(true);
-//        System.out.println(countField.get(m100));
-//        countField.set(m100, 999);
-//        System.out.println(countField.get(m100));
+        // 私有变量
+        Field countField = clazz.getDeclaredField("count");
+        countField.setAccessible(true);
+        System.out.println(countField.get(m100));
+        countField.set(m100, 999);
+        System.out.println(countField.get(m100));
 //        System.out.println(m100.count);
 
-        printFields(clazz);
+//        printFields(clazz);
 
-        Field field = clazz.getField("STATIC_MEMBER");
-        System.out.println(field.get(null));
+//        Field field = clazz.getField("STATIC_MEMBER");
+//        System.out.println(field.get(null));
 
-//        Method descMethod = clazz.getDeclaredMethod("describe");
-//        descMethod.setAccessible(true);
-//        descMethod.invoke(m100);
-//        descMethod.invoke(superMarket.getMerchandiseOf(0));
-//        descMethod.invoke(superMarket.getMerchandiseOf(10));
+        Method descMethod = clazz.getDeclaredMethod("describe");
+        descMethod.setAccessible(true);
+        descMethod.invoke(m100);
+        descMethod.invoke(superMarket.getMerchandiseOf(0));
+        descMethod.invoke(superMarket.getMerchandiseOf(10));
 //        m100.describe();
 
-//        Method staticMethod = clazz.getMethod("getNameOf", MerchandiseV2.class);
-//        String str = (String) staticMethod.invoke(null, m100);
-//        System.out.println(str);
+        Method staticMethod = clazz.getMethod("getNameOf", MerchandiseV2.class);
+        String str = (String) staticMethod.invoke(null, m100);
+        System.out.println(str);
 
 //        Method buyMethod = clazz.getMethod("buy", int.class);
 //        buyMethod.invoke(m100, 1);
