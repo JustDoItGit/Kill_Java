@@ -13,6 +13,7 @@ public class Phone extends MerchandiseV2 {
     // >> TODO 静态内部类，是在类中使用static修饰的类
     // >> TODO 静态内部类，可以有访问控制符。静态内部类和静态方法，静态变量一样，都是类的静态组成部分
     // >> TODO 静态内部类也是类，在继承，实现接口方面，都是一样的。以后我们讲的类，不特殊说明，在这方面都是一样的
+//    private static class CPU {
     public static class CPU {
         private double speed;
         private String producer;
