@@ -49,9 +49,11 @@ public class LearnMapAppMain {
         System.out.println(map);
     }
 
+    // TODO 创建 HashMap 实例，并按照泛型的定义，向里面放入key和value
     public static Map<String, String> createMap(int size) {
         Map<String, String> ret = new HashMap<>();
         for (int i = 0; i < size; i++) {
+            // TODO put的第一个为key，第二个为value
             ret.put("key" + i, String.valueOf(Math.random()));
         }
         return ret;
