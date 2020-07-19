@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 
 public class IterateListLambdaAppMain {
     public static void main(String[] args) {
-        List<String> myList = addELElementsToList(new ArrayList<>());
+        List<String> myList = addElementsToList(new ArrayList<>());
         String outside = "outside string";
 
         for (String s : myList
@@ -60,7 +60,7 @@ public class IterateListLambdaAppMain {
         myMap.forEach(IterateListLambdaAppMain::processTwoStrings);
     }
 
-    public static List<String> addELElementsToList(List<String> list) {
+    public static List<String> addElementsToList(List<String> list) {
         for (int i = 0; i < 22; i++) {
             list.add("str" + i);
         }
