@@ -2,6 +2,7 @@ package 定时任务;
 
 import java.util.TimerTask;
 
+// TODO 必须继承 TimerTask 才能被 Timer schedule
 public class FindABCTask extends TimerTask {
     @Override
     public void run() {
